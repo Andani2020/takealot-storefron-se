@@ -1,4 +1,4 @@
-@AddProductToCart
+@smoke
 Feature: Scenario: search product
   Background:
     Given the user navigates to "https://www.takealot.com/" url

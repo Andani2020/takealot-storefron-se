@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1dad6d-655b-44bf-a560-3cfac2ca2ae0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/PageObjectsEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/SetPageObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/takealot/cucumber/CucumberRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/takealot/cucumber/CucumberRunnerOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/takealot/RunCucumberTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/PageObjectsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/PageObjectsInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/takealot/page_objects/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/takealot/stepdefinitions/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/takealot/stepdefinitions/MyStepdefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/drivers/ChromeSetup.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/ChromeSetup.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/env/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/features/E2E Add Product To Cart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/E2E Add Product To Cart.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/features/search product.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/properties/browser.options" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/properties/cucumber.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/takealot/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/takealot/Run.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/takealot/cucumber/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/takealot/cucumber/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/E2E Add Product To Cart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/E2E Add Product To Cart.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +62,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Git Repo\takealot-storefront-framework\src\test\java\resources\features" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.takealot" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
