@@ -3,6 +3,7 @@ Feature: Scenario: search product
   Background:
     Given the user navigates to "https://www.takealot.com/" url
     And accept an alert if it exists
+    And the user verifies that "takealot_logo" page element is displayed on "home_page" page
 
   Scenario Outline:
     And the user clicks "product_search_field" page element on "home_page" page

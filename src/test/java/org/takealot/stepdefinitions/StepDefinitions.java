@@ -6,24 +6,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
-import static org.assertj.core.api.Assertions.assertThat;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.takealot.page_objects.HomePage;
-import org.takealot.page_objects.ProductPage;
 import org.takealot.page_objects.SetPageObjects;
 
 import java.text.MessageFormat;
 
-public class MyStepdefs {
-    private static final Logger logger = LogManager.getLogger(MyStepdefs.class);
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class StepDefinitions {
+    private static final Logger logger = LogManager.getLogger(StepDefinitions.class);
     WebDriver driver;
     SetPageObjects setPageObjects;
-    HomePage homePage;
-    ProductPage productPage;
-    public MyStepdefs() {}
+    public StepDefinitions() {
 
 
+    }
 
         @Given("^accept an alert if it exists$")
         public void acceptAlertIfExists() {
@@ -98,6 +96,18 @@ public class MyStepdefs {
             this.setPageObjects.getPageObject().clickItemByAttributeValue(attribute,action,expectedValue);
         } catch (Exception e) {
             logger.error(MessageFormat.format("An unexpected exception occurred while trying to click a page element with attribute \"{0}\" and attribute value: \"{1}\"", attribute,expectedValue));
+            logger.debug(MessageFormat.format("Error cause: \"{0}\"", e.getCause()));
+            e.printStackTrace();
+        }
+    }
+
+    @And("^the user verifies that \"([^\"]*)\" page element is displayed on \"([^\"]*)\" page")
+    public void theUserVerifiesThatPageElementIsDisplayedOnPage(String pageElementName, String pageObjectName) {
+        try {
+            this.setPageObjects = new SetPageObjects(pageObjectName);
+            this.setPageObjects.getPageObject().verifyWebElementIsDisplayed(pageElementName);
+        } catch (Exception e) {
+            logger.error(MessageFormat.format("An unexpected exception occurred while trying to verify that the page elemnt \"{0}\" is displayed",pageElementName));
             logger.debug(MessageFormat.format("Error cause: \"{0}\"", e.getCause()));
             e.printStackTrace();
         }
