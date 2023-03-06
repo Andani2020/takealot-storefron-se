@@ -27,10 +27,8 @@ public class ProductPage implements PageObjectsInterface {
     By cartProductTittle = By.xpath("//h3[@class='cart-item-module_item-title_1M9cq']");
     By checkOutButton = By.xpath("//a[contains(@class,'checkout-button')]");
 
-
-
     @Override
-    public WebElement getWebElement(String webElementName) throws InterruptedException {
+    public WebElement getWebElement(String webElementName) {
         WebElement el = null;
         switch (webElementName.toLowerCase()) {
             case "product_list":
@@ -67,25 +65,23 @@ public class ProductPage implements PageObjectsInterface {
         assert el !=null;
         return el;
     }
-
     @Override
-    public void typeText(String elementName, String textContent) throws InterruptedException {
+    public void typeText(String elementName, String textContent) {
         WebElement webElement = this.getWebElement(elementName);
         assert webElement != null;
         webElement.sendKeys(textContent);
 
     }
     @Override
-    public void clickWebElement(String elementName) throws InterruptedException {
+    public void clickWebElement(String elementName) {
         WebElement webElement = this.getWebElement(elementName);
         assert webElement != null;
         webElement.click();
         driver.quit();
 
     }
-
     public void clickItemByAttributeValue(String attribute, String action, String expectedValue) {
-        WebElement childElement = null;
+        WebElement childElement;
         List<WebElement> childElements = driver.findElements(By.className(attribute));
 
         logger.debug(MessageFormat.format("Child element count = \"{0}\"", childElements.size()));
@@ -98,12 +94,12 @@ public class ProductPage implements PageObjectsInterface {
                     logger.debug(MessageFormat.format("Checking if \"{0}\" is equal to \"{1}\"", expectedValue, actualText));
                     if (actualText.equals(expectedValue)) {
                         childElement.click();
-                    };
+                    }
                 } else if (action.equals("contains")) {
                     logger.debug(MessageFormat.format("Checking if \"{0}\" is in \"{1}\"", expectedValue, actualText));
                     if (actualText.contains(expectedValue)) {
                         childElement.click();
-                    };
+                    }
                 } else {
                     logger.error(MessageFormat.format("Action \"{0}\" is not supported. Supported actions are \"equal_to\" or \"contains\"", action));
 
@@ -115,7 +111,7 @@ public class ProductPage implements PageObjectsInterface {
     }
 
     @Override
-    public boolean verifyWebElementText(String pageElementName, String action, String expectedValue) throws InterruptedException {
+    public boolean verifyWebElementText(String pageElementName, String action, String expectedValue) {
         WebElement element = this.getWebElement(pageElementName);
         String actualValue = element.getText().trim();
         logger.debug("Actual value = "+ actualValue);
@@ -131,10 +127,9 @@ public class ProductPage implements PageObjectsInterface {
         }
         return false;
     }
-
     @Override
-    public boolean verifyWebElementIsDisplayed(String webElementName) throws InterruptedException {
-        WebElement pageElement = null;
+    public boolean verifyWebElementIsDisplayed(String webElementName) {
+        WebElement pageElement;
         pageElement = getWebElement(webElementName);
         logger.debug("Attempting to verify element where name = " + webElementName + " is displayed");
 
@@ -145,6 +140,5 @@ public class ProductPage implements PageObjectsInterface {
         logger.debug(webElementName + " Element is not visible= " + pageElement.isDisplayed());
         return false;
     }
-
 
 }
