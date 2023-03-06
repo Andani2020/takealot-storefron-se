@@ -8,8 +8,6 @@ import org.junit.runner.RunWith;
         glue = {"org/takealot/stepdefinitions/MyStepdefs"},
         features = {"src/test/resources/features"},
         plugin = {"pretty", "html:target/cucumber-reports"}
-
-
 )
 public class CucumberRunner {
 }
