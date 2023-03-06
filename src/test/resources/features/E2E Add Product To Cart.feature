@@ -18,5 +18,5 @@ Feature: Scenario: search product
     And the user clicks "check_out_button" page element on "product_page" page
 
     Examples:
-      |product_category|product_name        |productPrice|
-      |iphone charger         |20W PD Fast Charger For iPhone with USB-C to Lightning Cable|            |
+      |product_category|product_name                                                |
+      |iphone charger  |20W PD Fast Charger For iPhone with USB-C to Lightning Cable|
