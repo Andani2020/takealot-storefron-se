@@ -46,8 +46,6 @@ public class MyStepdefs {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/\n");
 
         driver.get(url);
-
-
     }
 
     @And("^the user clicks \"([^\"]*)\" page element on \"([^\"]*)\" page")

@@ -32,8 +32,6 @@ public class ProductPage implements PageObjectsInterface {
     @Override
     public WebElement getWebElement(String webElementName) throws InterruptedException {
         WebElement el = null;
-
-
         switch (webElementName.toLowerCase()) {
             case "product_list":
                 el = this.wait.until(ExpectedConditions.visibilityOfElementLocated(productList));

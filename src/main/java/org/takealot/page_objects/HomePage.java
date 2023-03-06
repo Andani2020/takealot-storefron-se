@@ -29,7 +29,6 @@ public class HomePage implements PageObjectsInterface {
     public WebElement getWebElement(String webElementName) throws InterruptedException {
         WebElement el = null;
 
-
         switch (webElementName.toLowerCase()) {
             case "takealot_logo":
                 el = this.wait.until(ExpectedConditions.visibilityOfElementLocated(takealotLogo));
